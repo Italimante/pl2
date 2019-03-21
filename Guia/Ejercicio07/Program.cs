@@ -10,6 +10,8 @@ namespace Ejercicio07
     {
         static void Main(string[] args)
         {
+            Console.Title = "Ejercicio 07";
+
             string dia;
             string mes;
             string anio;
