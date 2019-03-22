@@ -4,22 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio09
+namespace Ejercicio10
 {
     class Program
     {
 
-        public static void imprimirAsteriscos(int cant)
+        public static string imprimirAsteriscos(int cant)
         {
-            for (int i = 0; i <cant; i++)
+            string aux = "";
+
+            for (int i = 0; i < cant; i++)
             {
-                Console.Write("*");
+                aux = aux + "*";
             }
+
+            return aux;
         }
 
         static void Main(string[] args)
         {
-            Console.Title = "Ejercicio 09";
+            Console.Title = "Ejercicio 10";
 
             int altura;
             int i;
@@ -29,14 +33,11 @@ namespace Ejercicio09
             altura = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            for (i=0; i<altura; i++)
+            for (i = 0; i < altura; i++)
             {
-                imprimirAsteriscos(j);
-                Console.WriteLine();
-                j=j+2;
+                Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + imprimirAsteriscos(j).Length/2 ) + "}", imprimirAsteriscos(j) ));
+                j = j + 2;
             }
-
-            Console.WriteLine(String.Format("{0," + Console.WindowWidth / 2 + "}", "TEXT"));
 
             Console.ReadKey();
 
