@@ -10,10 +10,12 @@ namespace Ejercicio08
     {
         static void Main(string[] args)
         {
+            Console.Title = "Ejercicio 08";
+
             /*
              * CON VECTORES PARALELOS, todo villero y sin comprobar ingresos.
              */
-            
+
             int[] aCobrar = new int[10];
             int[] valorHora = new int[10];
             int[] cantAnios = new int[10];

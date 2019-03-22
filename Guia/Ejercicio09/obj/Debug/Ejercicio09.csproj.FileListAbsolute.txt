@@ -1,0 +1,7 @@
+D:\#git\pl2\Guia\Ejercicio09\bin\Debug\Ejercicio09.exe.config
+D:\#git\pl2\Guia\Ejercicio09\bin\Debug\Ejercicio09.exe
+D:\#git\pl2\Guia\Ejercicio09\bin\Debug\Ejercicio09.pdb
+D:\#git\pl2\Guia\Ejercicio09\obj\Debug\Ejercicio09.csprojAssemblyReference.cache
+D:\#git\pl2\Guia\Ejercicio09\obj\Debug\Ejercicio09.csproj.CoreCompileInputs.cache
+D:\#git\pl2\Guia\Ejercicio09\obj\Debug\Ejercicio09.exe
+D:\#git\pl2\Guia\Ejercicio09\obj\Debug\Ejercicio09.pdb
