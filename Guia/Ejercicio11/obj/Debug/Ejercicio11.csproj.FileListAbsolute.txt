@@ -5,3 +5,10 @@ D:\#git\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.csprojAssemblyReference.cache
 D:\#git\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.csproj.CoreCompileInputs.cache
 D:\#git\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.exe
 D:\#git\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.pdb
+C:\Users\itali\Desktop\pl2\Guia\Ejercicio11\bin\Debug\Ejercicio11.exe.config
+C:\Users\itali\Desktop\pl2\Guia\Ejercicio11\bin\Debug\Ejercicio11.exe
+C:\Users\itali\Desktop\pl2\Guia\Ejercicio11\bin\Debug\Ejercicio11.pdb
+C:\Users\itali\Desktop\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.csprojAssemblyReference.cache
+C:\Users\itali\Desktop\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.csproj.CoreCompileInputs.cache
+C:\Users\itali\Desktop\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.exe
+C:\Users\itali\Desktop\pl2\Guia\Ejercicio11\obj\Debug\Ejercicio11.pdb

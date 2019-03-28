@@ -30,7 +30,7 @@ namespace Ejercicio11
 
             int valorMin = 0;
             int valorMax = 0;
-            int acuNum = 0;
+            float acuNum = 0;
             int num = 0;
             bool flag = true;
 
@@ -57,7 +57,7 @@ namespace Ejercicio11
                         valorMin = num;
                     }
 
-                    acuNum = acuNum + acuNum;
+                    acuNum = acuNum + num;
 
                 }
                 else
