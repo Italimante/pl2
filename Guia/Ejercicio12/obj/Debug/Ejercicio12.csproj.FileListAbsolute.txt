@@ -1,0 +1,7 @@
+D:\#git\pl2\Guia\Ejercicio12\bin\Debug\Ejercicio12.exe.config
+D:\#git\pl2\Guia\Ejercicio12\bin\Debug\Ejercicio12.exe
+D:\#git\pl2\Guia\Ejercicio12\bin\Debug\Ejercicio12.pdb
+D:\#git\pl2\Guia\Ejercicio12\obj\Debug\Ejercicio12.csprojAssemblyReference.cache
+D:\#git\pl2\Guia\Ejercicio12\obj\Debug\Ejercicio12.csproj.CoreCompileInputs.cache
+D:\#git\pl2\Guia\Ejercicio12\obj\Debug\Ejercicio12.exe
+D:\#git\pl2\Guia\Ejercicio12\obj\Debug\Ejercicio12.pdb
