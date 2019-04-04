@@ -86,6 +86,27 @@ namespace Clase05
 
         public static bool operator +(Estante e, Producto p) //Optimizar este código
         {
+
+            #region new try2
+            //int i;
+            //bool esRepetido = false;
+
+            //for (i = 0; i < e._productos.Length; i++)
+            //{
+            //    if (e._productos[i] == p)
+            //    {
+            //        esRepetido = true;
+            //        break;
+            //    }
+            //}
+
+            //if (!esRepetido)
+            //{
+
+            //}
+
+            #endregion
+
             #region tryAgain
 
             int i;
@@ -101,10 +122,11 @@ namespace Clase05
                 }
             }
 
+
             for (i = 0; i < e._productos.Length; i++)
             {
-                //if(e._productos[i] == p) //Este me tira error
-                if(Object.ReferenceEquals(e._productos[i], p)) //Este sí
+                if(e._productos[i] == p) //Este me tiraba error, corregio al agregar igualdades con null
+                //if (Object.ReferenceEquals(e._productos[i], p)) //Este sí
                 {
                     return false; //Ya existe el producto
                 }

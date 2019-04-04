@@ -52,6 +52,11 @@ namespace Clase05
 
         public static bool operator ==(Producto p1, Producto p2)
         {
+            if(Object.ReferenceEquals(p1,null) || Object.ReferenceEquals(p2, null))
+            {
+                return false;
+            }
+
             return (p1._marca == p2._marca) && (p1._codigoDeBarra == p2._codigoDeBarra);
         }
 
