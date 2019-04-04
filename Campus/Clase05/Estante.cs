@@ -37,10 +37,10 @@ namespace Clase05
             string aux = "";
             for (i = 0; i < e._productos.Length; i++)
             {
-                aux += Producto.MostrarProducto(e._productos[i]);
+                aux += Producto.MostrarProducto(e._productos[i]) + "\n";
             }
 
-            return "Estanteria: " + e._ubicacionEstante.ToString() + "\nCon los productos:" + aux;
+            return "Estanteria: " + e._ubicacionEstante.ToString() + "\nCon los productos:\n" + aux;
         }
         #endregion Métodos
 

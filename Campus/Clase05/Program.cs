@@ -12,6 +12,7 @@ namespace Clase05
         {
             // Creo un estante
             Estante estante = new Estante(3, 1);
+
             // Creo 4 productos
             Producto p1 = new Producto("Pepsi", "PESDS97413", (float)18.5);
             Producto p2 = new Producto("Coca-Cola", "COSDS55752", (float)11.5);
@@ -58,10 +59,22 @@ namespace Clase05
             {
                 Console.WriteLine("¡NO agregó {0} {1} {2}!", p4.GetMarca(), (string)p4, p4.GetPrecio());
             }
+
+             
+
             // Muestro todo el estante
             Console.WriteLine();
             Console.WriteLine("<------------------------------------------------->");
             Console.WriteLine(Estante.MostrarEstante(estante));
+
+            //MyTest
+            Estante estanteB = estante - p1;
+
+            Console.WriteLine();
+            Console.WriteLine("<------------------------------------------------->");
+            Console.WriteLine(Estante.MostrarEstante(estanteB));
+
+
             Console.ReadKey();
         }
     }
