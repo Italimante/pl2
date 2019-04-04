@@ -48,6 +48,23 @@ namespace Clase05
 
         public static bool operator ==(Estante e, Producto p)
         {
+
+            #region NEWTRY
+            /*
+            foreach (Producto item in e._productos)
+            {
+                if(p == item)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+            */
+            #endregion
+
+            #region BACKUP
+            
             int i;
             for (i = 0; i < e._productos.Length; i++)
             {
@@ -58,6 +75,8 @@ namespace Clase05
             }
 
             return false;
+            
+            #endregion
         }
 
         public static bool operator !=(Estante e, Producto p)
@@ -67,41 +86,35 @@ namespace Clase05
 
         public static bool operator +(Estante e, Producto p) //Optimizar este código
         {
-            int largo = e._productos.Length;
-            int i;
-            bool hayCapacidad = false;
-            bool estaRepetido = true;
-            int lugarVacio = -1;
+            #region tryAgain
 
-            for (i = 0; i < largo; i++)
+            int i;
+            int lugarVacio = 0;
+
+            for (i = 0; i < e._productos.Length; i++)
             {
-                if (e._productos[i] is null)
+                if (Object.ReferenceEquals(e._productos[i], null))//Si se cumple es porque hay un lugar libre
                 {
+                    //e._productos[i] = p;
                     lugarVacio = i;
-                    hayCapacidad = true;
                     break;
                 }
             }
 
-            if (hayCapacidad)
+            for (i = 0; i < e._productos.Length; i++)
             {
-                for (i = 0; i < largo; i++)
+                //if(e._productos[i] == p) //Este me tira error
+                if(Object.ReferenceEquals(e._productos[i], p)) //Este sí
                 {
-                    if (e._productos[i] != p)
-                    {
-                        estaRepetido = false;
-                        break;
-                    }
+                    return false; //Ya existe el producto
                 }
             }
 
-            if (hayCapacidad && estaRepetido == false)
-            {
-                e._productos[lugarVacio] = p;
-                return true;
-            }
+            e._productos[lugarVacio] = p;
 
-            return false;
+            return true;
+
+            #endregion
         }
 
         public static Estante operator -(Estante e, Producto p)
