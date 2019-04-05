@@ -37,9 +37,12 @@ namespace Clase05
             string aux = "";
             for (i = 0; i < e._productos.Length; i++)
             {
-                aux += Producto.MostrarProducto(e._productos[i]) + "\n";
+                if (!Object.ReferenceEquals(e._productos[i], null))
+                {
+                    aux += Producto.MostrarProducto(e._productos[i]) + "\n";
+                }
+                
             }
-
             return "Estanteria: " + e._ubicacionEstante.ToString() + "\nCon los productos:\n" + aux;
         }
         #endregion Métodos
@@ -48,23 +51,6 @@ namespace Clase05
 
         public static bool operator ==(Estante e, Producto p)
         {
-
-            #region NEWTRY
-            /*
-            foreach (Producto item in e._productos)
-            {
-                if(p == item)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-            */
-            #endregion
-
-            #region BACKUP
-            
             int i;
             for (i = 0; i < e._productos.Length; i++)
             {
@@ -75,8 +61,6 @@ namespace Clase05
             }
 
             return false;
-            
-            #endregion
         }
 
         public static bool operator !=(Estante e, Producto p)
@@ -86,55 +70,51 @@ namespace Clase05
 
         public static bool operator +(Estante e, Producto p) //Optimizar este código
         {
+            int i;
+            //Recorro todos buscando si esta repetido
+            for (i = 0; i < e._productos.Length; i++)
+            {
+                if (e._productos[i] == p) //Si ya existe retorna falso
+                {
+                    return false;
+                }
+            }
+            //Recorro todo buscando si hay lugar libre (libre = producto null)
+            for (i = 0; i < e._productos.Length; i++)
+            {
+                if(Object.ReferenceEquals(e._productos[i], null))
+                {
+                    e._productos[i] = p;
+                    return true;
+                }
+            }
+            return false;
+            #region SIN OPTIMIZAR
 
-            #region new try2
             //int i;
-            //bool esRepetido = false;
+            //int lugarVacio = -1;
 
             //for (i = 0; i < e._productos.Length; i++)
             //{
-            //    if (e._productos[i] == p)
+            //    if (Object.ReferenceEquals(e._productos[i], null))//Si se cumple es porque hay un lugar libre
             //    {
-            //        esRepetido = true;
+            //        //e._productos[i] = p;
+            //        lugarVacio = i;
             //        break;
             //    }
             //}
-
-            //if (!esRepetido)
+            //for (i = 0; i < e._productos.Length; i++)
             //{
-
+            //    if(e._productos[i] == p || lugarVacio == -1 ) //Este me tiraba error, corregio al agregar igualdades con null
+            //    //if (Object.ReferenceEquals(e._productos[i], p)) //Este sí
+            //    {
+            //        return false; //Ya existe el producto o no hay lugar vacio
+            //    }
             //}
 
-            #endregion
+            //e._productos[lugarVacio] = p;
 
-            #region tryAgain
-
-            int i;
-            int lugarVacio = 0;
-
-            for (i = 0; i < e._productos.Length; i++)
-            {
-                if (Object.ReferenceEquals(e._productos[i], null))//Si se cumple es porque hay un lugar libre
-                {
-                    //e._productos[i] = p;
-                    lugarVacio = i;
-                    break;
-                }
-            }
-
-
-            for (i = 0; i < e._productos.Length; i++)
-            {
-                if(e._productos[i] == p) //Este me tiraba error, corregio al agregar igualdades con null
-                //if (Object.ReferenceEquals(e._productos[i], p)) //Este sí
-                {
-                    return false; //Ya existe el producto
-                }
-            }
-
-            e._productos[lugarVacio] = p;
-
-            return true;
+            //return true;
 
             #endregion
         }
