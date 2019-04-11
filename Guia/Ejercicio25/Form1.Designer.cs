@@ -72,7 +72,7 @@
             this.txtResultadoDec.Name = "txtResultadoDec";
             this.txtResultadoDec.Size = new System.Drawing.Size(100, 20);
             this.txtResultadoDec.TabIndex = 3;
-            this.txtResultadoDec.TextChanged += new System.EventHandler(this.txtResultadoDec_TextChanged);
+            
             // 
             // lblDecimalBinario
             // 
@@ -108,7 +108,6 @@
             this.txtResultadoBin.Name = "txtResultadoBin";
             this.txtResultadoBin.Size = new System.Drawing.Size(100, 20);
             this.txtResultadoBin.TabIndex = 7;
-            this.txtResultadoBin.TextChanged += new System.EventHandler(this.txtResultadoBin_TextChanged);
             // 
             // Form1
             // 
