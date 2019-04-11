@@ -90,6 +90,7 @@
             this.txtDecimal.Size = new System.Drawing.Size(100, 20);
             this.txtDecimal.TabIndex = 5;
             this.txtDecimal.TextChanged += new System.EventHandler(this.txtDecimal_TextChanged);
+            this.txtDecimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDecimal_KeyPress);
             // 
             // btnDecToBin
             // 
@@ -113,6 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(422, 78);
             this.Controls.Add(this.txtResultadoBin);
             this.Controls.Add(this.btnDecToBin);
@@ -123,6 +125,7 @@
             this.Controls.Add(this.txtBinario);
             this.Controls.Add(this.v);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
