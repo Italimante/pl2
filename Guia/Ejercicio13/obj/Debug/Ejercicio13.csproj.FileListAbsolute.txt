@@ -4,3 +4,4 @@ D:\#git\pl2\Guia\Ejercicio13\bin\Debug\Ejercicio13.pdb
 D:\#git\pl2\Guia\Ejercicio13\obj\Debug\Ejercicio13.csproj.CoreCompileInputs.cache
 D:\#git\pl2\Guia\Ejercicio13\obj\Debug\Ejercicio13.exe
 D:\#git\pl2\Guia\Ejercicio13\obj\Debug\Ejercicio13.pdb
+D:\#git\pl2\Guia\Ejercicio13\obj\Debug\Ejercicio13.csprojAssemblyReference.cache
