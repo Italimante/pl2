@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Ejercicio28
 {
@@ -54,16 +55,19 @@ namespace Ejercicio28
                     }
                 }
             }
-
             //Muestro el diccionario como esta, sin ordenar
-            foreach(KeyValuePair<string, int> item in dicPalabras)
+            auxPalabras = auxPalabras + "Lista sin ordernar:\n\n";
+            foreach (KeyValuePair<string, int> item in dicPalabras)
             {
-                auxPalabras = auxPalabras + " " + item.Key + " " + item.Value.ToString() + "\n";
-                rtxtText.Text = auxPalabras;
+                auxPalabras = auxPalabras + "Palabra: " + item.Key + " Repetido: " + item.Value + "\n";
             }
+            rtxtText.Text = auxPalabras + "\nLista ordenada:\n";
+
+            //dicPalabras.OrderBy();
+            //https://www.iteramos.com/pregunta/1556/como-ordenar-un-diccionario-por-valor
 
             btnCalcular.Enabled = false;
-
-        }
+        }//end btnCalcular_click
+        
     }
 }
