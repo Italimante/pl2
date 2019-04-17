@@ -55,19 +55,44 @@ namespace Ejercicio28
                     }
                 }
             }
+
             //Muestro el diccionario como esta, sin ordenar
             auxPalabras = auxPalabras + "Lista sin ordernar:\n\n";
             foreach (KeyValuePair<string, int> item in dicPalabras)
             {
                 auxPalabras = auxPalabras + "Palabra: " + item.Key + " Repetido: " + item.Value + "\n";
             }
-            rtxtText.Text = auxPalabras + "\nLista ordenada:\n";
+            auxPalabras = auxPalabras + "\nLista ordenada:\n";
+
+            //Ordeno el diccionario en un nuevo objeto usando LINQ (esto no lo debería saber todavía)
+            var dicOrdenado = from dicElemento in dicPalabras orderby dicElemento.Value descending select dicElemento;
+
+            //Creo un string auxiliar para guardar el top de palabras mas repetidas
+            string auxTop3 = "";
+            int k = 0;
+            foreach(object elemento in dicOrdenado)
+            {
+                auxPalabras = auxPalabras + elemento + "\n";
+                if (k < 3) //Guardo las tres primeras que son las más repetidas
+                {
+                    auxTop3 = auxTop3 + elemento + "\n";
+                }
+                k++;
+            }
+
+            //Muestro todo en el richTextBox
+            rtxtText.Text = auxPalabras;
+
+            //Muestro las top tres en un Box
+            MessageBox.Show("Top 3 palabras más repetidas: " + auxTop3);
+
 
             //dicPalabras.OrderBy();
             //https://www.iteramos.com/pregunta/1556/como-ordenar-un-diccionario-por-valor
 
             btnCalcular.Enabled = false;
         }//end btnCalcular_click
-        
+
+
     }
 }
