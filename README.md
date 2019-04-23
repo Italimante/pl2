@@ -9,14 +9,23 @@ Repositorio que voy a utilizar en la cursada de PL2, para almacenar ejercicios d
 ## Carpetas
 
 - **Estudiar:**
-_Contiene apuntes sueltos, sin ordenar, material brindado por los profesores en clase._
+  - _Contiene apuntes sueltos, sin ordenar, material brindado por los profesores en clase._
 
 - **Guía:**
-_Contiene ejercicios de la guía: **Guía de Ejercicios - Laboratorio II - 2017.v6.0.0.pdf** , los que llegué a resolver. La mayoría de los ejercicios no tienen validación de entrada y no cumplen con el estilo de programación, además pueden no cumplir con exactitud el enunciado._
+  - _Contiene ejercicios de la guía: **Guía de Ejercicios - Laboratorio II - 2017.v6.0.0.pdf** , los que llegué a resolver. La mayoría de los ejercicios no tienen validación de entrada y no cumplen con el estilo de programación, además pueden no cumplir con exactitud el enunciado._
+
+- **Campus:**
+  - _Contiene algunos ejercicios hechos del campus_
+
+- **Modelos de parcial:**
+  - _Carpeta con parciales que realicé de práctica, son los que están en el campus._
+
+- **Exámenes:**
+  - _Contiene los exámenes que realicé en clase, primer parcial, segundo y/o finales_
 
 ## Archivos .pdf
 
 - **Guía de Ejercicios - Laboratorio II - 2017.v6.0.0.pdf**:
-_Contiene 73 ejercicios para prácticar C#_
+  - _Contiene 73 ejercicios para prácticar C#_
 - **Introducción a C# - v099.pdf**:
-_Contiene 444 páginas con teoría de C#, hecho por [Nacho Cabanes](http://www.nachocabanes.com), muy útil._
+  - _Contiene 444 páginas con teoría de C#, hecho por [Nacho Cabanes](http://www.nachocabanes.com), muy útil._
