@@ -51,11 +51,10 @@ namespace Clase06
         /// </summary>
         /// <param name="texto"></param>
         /// <returns>Cantidad de palabras</returns>
-        private int CantidadPalabras(string texto)
+        private int CantidadPalabras(string pTexto)
         {
-            //Separo el texto y lo guardo en separadas
-            char[] eliminarLetras = {' ', ',', '.', ':', '\t', '\n'};
-            string[] palabrasSeparadas = texto.Split(eliminarLetras);
+            char[] eliminarLetras = { ' ', ',', '.', ':', '\t', '\n' };
+            string[] palabrasSeparadas = pTexto.Split(eliminarLetras);
             return palabrasSeparadas.Length;
         }
 
