@@ -61,9 +61,9 @@ namespace Ejercicio37
         public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("Duración: {0}", this.Duracion);
-            sb.AppendFormat("Número destino: {0}", this.NroDestino);
-            sb.AppendFormat("Número origen: {0}", this.NroOrigen);
+            sb.AppendFormat("\nDuración: {0}", this.Duracion);
+            sb.AppendFormat("\nNúmero destino: {0}", this.NroDestino);
+            sb.AppendFormat("\nNúmero origen: {0}", this.NroOrigen);
             return sb.ToString();
         }
         /// <summary>
@@ -72,7 +72,7 @@ namespace Ejercicio37
         /// <param name="llamada1"></param>
         /// <param name="llamada2"></param>
         /// <returns></returns>
-        public int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
+        public static int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
         {
             if(llamada1.Duracion > llamada2.Duracion)
             {

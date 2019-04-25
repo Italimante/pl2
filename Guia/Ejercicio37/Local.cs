@@ -36,8 +36,8 @@ namespace Ejercicio37
         public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("{0}", base.Mostrar());
-            sb.AppendFormat("Costo de llamada: {0}", this.CostoLlamada);
+            sb.AppendFormat("\n{0}", base.Mostrar());
+            sb.AppendFormat("\nCosto de llamada: {0}", this.CostoLlamada);
             return sb.ToString();
         }
 
