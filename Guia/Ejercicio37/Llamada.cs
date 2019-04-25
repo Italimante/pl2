@@ -55,7 +55,7 @@ namespace Ejercicio37
 
         #region Methods
         /// <summary>
-        /// Muesra los datos de la llamada.
+        /// Muestra los datos de la llamada.
         /// </summary>
         /// <returns>Un string con los datos de la llamada.</returns>
         public string Mostrar()

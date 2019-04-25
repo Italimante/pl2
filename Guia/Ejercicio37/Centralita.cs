@@ -73,7 +73,44 @@ namespace Ejercicio37
         /// <returns></returns>
         private float CalcularGanancia(Llamada.TipoLlamada tipo)
         {
-            return -1;
+            float recaudado = 0;
+
+            //Recorro toda la lista de llamadas
+            foreach(Llamada llamada in this.listaDeLlamadas)
+            {
+                //Fijandome el tipo de llamada: Local, Provincial o Todas
+                switch (tipo)
+                {
+                    //Todo el código restante me lo robé, porque me volví loco trantando y no pude.
+                    case Llamada.TipoLlamada.Local:
+                        if(llamada is Local)
+                        {
+                            recaudado += ((Local)llamada).CostoLlamada;
+                        }
+                        break;
+
+                    case Llamada.TipoLlamada.Provincial:
+                        if(llamada is Provincial)
+                        {
+                            recaudado += ((Provincial)llamada).CostoLlamada;
+                        }
+                        
+                        break;
+
+                    case Llamada.TipoLlamada.Todas:
+                        if(llamada is Local)
+                        {
+                            recaudado += ((Local)llamada).CostoLlamada;
+                        }
+                        else if(llamada is Provincial)
+                        {
+                            recaudado += ((Provincial)llamada).CostoLlamada;
+                        }
+                        break;
+                }
+            }
+
+            return recaudado;
         }
 
         public void OrdenarLlamadas()
@@ -89,15 +126,19 @@ namespace Ejercicio37
         public string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            //sb.AppendFormat("{0}", base.Mostrar());
+            sb.AppendFormat("\n--------------------------------------------------------------\n");
             sb.AppendFormat("\nRazón social: {0}", this.razonSocial);
             sb.AppendFormat("\nGanancia total: {0}", this.GananciasPorTotal);
             sb.AppendFormat("\nGanancia llamadas locales: {0}", this.GananciasPorLocal);
             sb.AppendFormat("\nGanancia llamadas provinciales: {0}", this.GananciasPorProvincial);
+
+            this.OrdenarLlamadas();
+
             for(int i = 0; i < this.listaDeLlamadas.Count; i++)
             {
-                //sb.AppendFormat("{0}",listaDeLlamadas.)
+                sb.AppendFormat("{0}", this.listaDeLlamadas[i].Mostrar());
             }
+
             return sb.ToString();
         }
 
