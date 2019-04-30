@@ -149,9 +149,9 @@ namespace Entidades
             }
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("\n[TEST] - Mostrar equipo");
             sb.AppendFormat("\nNombre del equipo: {0}", e.Nombre);
-            sb.AppendFormat("\nLista de jugadores:");
+            sb.AppendFormat("\nDirector técnico: {0}", elDt);
+            sb.AppendFormat("\n\nLista de jugadores:");
             for (int i = 0; i < e.jugadores.Count; i++)
             {
                 sb.AppendFormat("\n{0}", e.jugadores[i].Mostrar());
@@ -174,19 +174,6 @@ namespace Entidades
         /// <returns></returns>
         public static Equipo operator +(Equipo e, Jugador j)
         {
-            #region Old
-
-            ////Revisa si ya está
-            //for(int i = 0; i < e.jugadores.Count; i++)
-            //{
-            //    //Si lo encuentra retorna el equipo que ya está
-            //    if (e.jugadores[i] == j)
-            //    {
-            //        return e;
-            //    }
-
-            //}
-            #endregion
 
             //Reviso si ya existe, usando la sobrecarga ' == '
             if (e == j)
@@ -199,7 +186,9 @@ namespace Entidades
             {
                 e.jugadores.Add(j);
             }
-            e.jugadores.Add(j);
+
+            //e.jugadores.Add(j); //Me olvidé de sacar esto, puedo ser tan pelotudo viejo?
+
             return e;
         }
 
@@ -212,16 +201,31 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Equipo e, Jugador j)
         {
-            
-            for(int i = 0; i<e.jugadores.Count; i++)
+            #region Con For
+            for (int i = 0; i < e.jugadores.Count; i++)
             {
-                if( Equals(e.jugadores[i], j ))
+                if (Equals(e.jugadores[i], j))
                 {
                     return true;
                 }
             }
 
             return false;
+            #endregion
+
+            #region Con Foreach
+            //bool retorno = false;
+
+            //foreach(Jugador jugador in e.jugadores)
+            //{
+            //    if ( ReferenceEquals(jugador, j) ) {
+            //        return true;
+            //    }
+            //}
+
+            //return retorno;
+            #endregion
+
         }
 
         public static bool operator !=(Equipo e, Jugador j)

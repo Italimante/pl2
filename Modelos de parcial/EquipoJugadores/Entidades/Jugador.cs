@@ -8,9 +8,6 @@ namespace Entidades
 {
     public class Jugador:Persona
     {
-
-        
-
         #region Fields
         private Posicion posicion;
         private float altura;
@@ -61,7 +58,6 @@ namespace Entidades
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("\n[TEST 03] - Mostrar desde Jugador");
             sb.AppendFormat("{0}", base.Mostrar());
             sb.AppendFormat("\nPosición: {0}", this.Posicion);
             sb.AppendFormat("\nAltura: {0}", this.Altura.ToString());
@@ -89,6 +85,7 @@ namespace Entidades
         public bool ValidarEstadoFisico()
         {
             double imc = this.Peso / (Math.Pow(this.Altura, 2));
+            Math.Round(imc);
             return (imc > 18.5 && imc <= 25);
         }
 

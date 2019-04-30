@@ -68,11 +68,10 @@ namespace Entidades
         public virtual string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("\n[TEST] - Mostrar desde Persona");
             sb.AppendFormat("\nNombre: {0}", this.Nombre);
-            sb.AppendFormat("\nAppelido: {0}", this.Apellido);
-            sb.AppendFormat("\nAppelido: {0}", this.Edad.ToString());
-            sb.AppendFormat("\nAppelido: {0}", this.Dni.ToString());
+            sb.AppendFormat("\nApellido: {0}", this.Apellido);
+            sb.AppendFormat("\nEdad: {0}", this.Edad.ToString());
+            sb.AppendFormat("\nDNI: {0}", this.Dni.ToString());
             return sb.ToString();
         }
 
