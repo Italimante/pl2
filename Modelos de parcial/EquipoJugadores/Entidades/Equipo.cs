@@ -201,16 +201,20 @@ namespace Entidades
         /// <returns></returns>
         public static bool operator ==(Equipo e, Jugador j)
         {
-            #region Con For
-            for (int i = 0; i < e.jugadores.Count; i++)
-            {
-                if (Equals(e.jugadores[i], j))
-                {
-                    return true;
-                }
-            }
+            #region Con Contains
+            return e.jugadores.Contains(j);
+            #endregion
 
-            return false;
+            #region Con For
+            //for (int i = 0; i < e.jugadores.Count; i++)
+            //{
+            //    if (Equals(e.jugadores[i], j))
+            //    {
+            //        return true;
+            //    }
+            //}
+
+            //return false;
             #endregion
 
             #region Con Foreach
