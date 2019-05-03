@@ -14,3 +14,8 @@ guid
 Primer parcial:
 - 5 clases
 - llamar un form desde otro
+
+
+trycatch voz_018 & 019
+- la clase excepcition no tiene que ir primero en un multiple trycatch
+- 

@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Ejercicio40
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
+            //Tratando de generar un formulario
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
             // Mi central
             Centralita c = new Centralita("Fede Center");
             // Mis 4 llamadas
@@ -39,7 +45,12 @@ namespace Ejercicio40
             c.OrdenarLlamadas();
             Console.WriteLine(c.ToString());
 
+            Console.WriteLine("\nPresione una tecla para abrir el formulario principal\n");
             Console.ReadKey();
+
+            //Creando un formulario
+            Application.Run(new FormCentral());
+
         }
     }
 }
