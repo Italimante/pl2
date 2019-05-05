@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Ejercicio40_form
+namespace Ejercicio40
 {
-    public partial class Form1 : Form
+    public partial class FormMostrar : Form
     {
-        public Form1()
+        public FormMostrar()
         {
             InitializeComponent();
+        }
+
+        private void FormMostrar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -6,4 +6,4 @@ _La mayoría de los ejercicios no tienen validación de entrada y no cumplen con
 - Ejercicio 05
 - Ejercicio 18
 - Ejercicio 20
-- 
+- Ejercicio 40: Falta formulario

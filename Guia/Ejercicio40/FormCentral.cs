@@ -12,14 +12,24 @@ namespace Ejercicio40
 {
     public partial class FormCentral : Form
     {
-        public FormCentral()
+        
+
+        public FormCentral() //Sería formMenú
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void FormCentral_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void buttonFacturacionTotal_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
+
+
+
 }

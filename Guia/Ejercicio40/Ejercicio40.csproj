@@ -51,6 +51,12 @@
     <Compile Include="FormCentral.Designer.cs">
       <DependentUpon>FormCentral.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMostrar.Designer.cs">
+      <DependentUpon>FormMostrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Llamada.cs" />
     <Compile Include="Local.cs" />
     <Compile Include="Program.cs" />
@@ -63,6 +69,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormCentral.resx">
       <DependentUpon>FormCentral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMostrar.resx">
+      <DependentUpon>FormMostrar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
