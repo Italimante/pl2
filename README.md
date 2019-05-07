@@ -1,4 +1,4 @@
-# Programación y laboratorio 2
+﻿# Programación y laboratorio 2
 Repositorio que voy a utilizar en la cursada de PL2, para almacenar ejercicios de la guía, del campus, apuntes en clase, algunos exámenes y los trabajos prácticos.
 
 - **Curso:** 2C
@@ -27,5 +27,3 @@ Repositorio que voy a utilizar en la cursada de PL2, para almacenar ejercicios d
 
 - **Guía de Ejercicios - Laboratorio II - 2017.v6.0.0.pdf**:
   - _Contiene 73 ejercicios para prácticar C#_
-- **Introducción a C# - v099.pdf**:
-  - _Contiene 444 páginas con teoría de C#, hecho por [Nacho Cabanes](http://www.nachocabanes.com), muy útil._
