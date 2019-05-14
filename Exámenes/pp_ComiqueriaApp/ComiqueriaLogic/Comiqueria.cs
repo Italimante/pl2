@@ -81,6 +81,8 @@ namespace ComiqueriaLogic
         public string ListarVentas()
         {
             StringBuilder sb = new StringBuilder();
+
+            this.ventas.Sort(Comiqueria.OrdenarVentaPorFecha);
             
             for (int i = 0; i < this.ventas.Count; i++)
             {
@@ -88,6 +90,28 @@ namespace ComiqueriaLogic
             }
 
             return "";
+        }
+
+        /// <summary>
+        /// Ordena las ventas comparando sus fechas de forma ascendente
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
+        public static int OrdenarVentaPorFecha(Venta v1, Venta v2)
+        {
+            if(v1.Fecha > v2.Fecha)
+            {
+                return 1;
+            }
+            else if(v1.Fecha < v2.Fecha)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         /// <summary>
