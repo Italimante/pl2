@@ -89,5 +89,6 @@ namespace ComiqueriaApp
                 this.richTextBoxVentas.Text = this.comiqueria.ListarVentas();
             }
         }
+
     }
 }
