@@ -86,10 +86,10 @@ namespace ComiqueriaLogic
             
             for (int i = 0; i < this.ventas.Count; i++)
             {
-                sb.AppendFormat("\n{0}", this.ventas[i].ObtenerDescripcionBreve());
+                sb.AppendFormat("{0}", this.ventas[i].ObtenerDescripcionBreve());
             }
 
-            return "";
+            return sb.ToString();
         }
 
         /// <summary>

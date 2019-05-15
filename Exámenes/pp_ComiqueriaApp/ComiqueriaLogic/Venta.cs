@@ -59,8 +59,9 @@ namespace ComiqueriaLogic
         /// <param name="cantidad"></param>
         private void Vender(int cantidad)
         {
+            this.producto.Stock = this.producto.Stock - cantidad;
             this.fecha = DateTime.Now;
-            this.precioFinal = CalcularPrecioFinal(this.producto.Precio, this.producto.Stock);
+            this.precioFinal = CalcularPrecioFinal(this.producto.Precio, cantidad);
         }
 
 
@@ -73,9 +74,9 @@ namespace ComiqueriaLogic
         public string ObtenerDescripcionBreve()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("\nFecha {0} -", this.Fecha);
-            sb.AppendFormat("Descripción {0} -", this.producto.Descripcion);
-            sb.AppendFormat("Precio final {0}\n", this.precioFinal); //Esto en dos decimales
+            sb.AppendFormat("{0} - ", this.Fecha);
+            sb.AppendFormat("{0} - ", this.producto.Descripcion);
+            sb.AppendFormat("${0}\n", Math.Round(this.precioFinal,2));
             return sb.ToString();
         }
 
@@ -89,9 +90,13 @@ namespace ComiqueriaLogic
         /// <returns></returns>
         public static double CalcularPrecioFinal(double precioUnidad, int cantidad)
         {
-            double aux = precioUnidad * cantidad;
-            aux = (aux * 100) / Venta.porcentajeIva;
-            return aux + (precioUnidad * cantidad);
+            double precioFinal = precioUnidad * cantidad;
+
+            //Sacar el porcentajeIva:
+            double porcentaje = (porcentajeIva * precioFinal) / 100;
+
+            //Aplico el porcentaje al precio final
+            return precioFinal + porcentaje;
         }
 
         #endregion

@@ -95,9 +95,9 @@ namespace ComiqueriaLogic
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("- Descripción: {0}", this.Descripcion);
-            sb.AppendFormat("- Código: {0}", this.codigo);
-            sb.AppendFormat("- Precio: {0}", this.Precio);
+            sb.AppendFormat("- Descripción: {0}\n", this.Descripcion);
+            sb.AppendFormat("- Código: {0}\n", this.codigo);
+            sb.AppendFormat("- Precio: {0}\n", this.Precio);
             sb.AppendFormat("- Stock: {0}", this.Stock);
             return sb.ToString();
         }

@@ -57,6 +57,7 @@
             this.richTextBoxVentas.Size = new System.Drawing.Size(746, 128);
             this.richTextBoxVentas.TabIndex = 1;
             this.richTextBoxVentas.Text = "";
+            
             // 
             // groupBoxAcciones
             // 
