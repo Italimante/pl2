@@ -12,11 +12,13 @@ namespace Ejercicio40
 {
     public partial class FormCentral : Form
     {
-        
 
-        public FormCentral() //Sería formMenú
+        private Centralita centralitaForm;
+
+        public FormCentral(Centralita c) //Sería formMenú
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            this.centralitaForm = c;
         }
 
         private void FormCentral_Load(object sender, EventArgs e)
@@ -24,9 +26,15 @@ namespace Ejercicio40
 
         }
 
-        private void buttonFacturacionTotal_Click(object sender, EventArgs e)
+        private void buttonGenerarLlamada_Click(object sender, EventArgs e)
         {
-            
+            //Si se presiona btnGenerarLlamada abrir un nuevo formulario como Dialog:
+            Form f = new FormLlamador(this.centralitaForm);
+            DialogResult result = f.ShowDialog();
+            if(result == DialogResult.OK)
+            {
+
+            }
         }
     }
 

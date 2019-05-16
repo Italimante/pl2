@@ -46,10 +46,10 @@ namespace Ejercicio40
             Console.WriteLine(c.ToString());
 
             Console.WriteLine("\nPresione una tecla para abrir el formulario principal\n");
-            Console.ReadKey();
+            //Console.ReadKey();
 
             //Creando un formulario
-            Application.Run(new FormCentral());
+            Application.Run(new FormCentral(c));
 
         }
     }

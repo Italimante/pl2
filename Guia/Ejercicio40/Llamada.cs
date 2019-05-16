@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio40
 {
-    abstract class Llamada
+    public abstract class Llamada
     {
         #region Fields
 

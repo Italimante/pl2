@@ -12,9 +12,13 @@ namespace Ejercicio40
 {
     public partial class FormMostrar : Form
     {
-        public FormMostrar()
+
+        private Centralita centralita;
+
+        public FormMostrar(Centralita centralita)
         {
             InitializeComponent();
+            this.centralita = centralita;
         }
 
         private void FormMostrar_Load(object sender, EventArgs e)

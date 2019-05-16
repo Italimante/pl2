@@ -51,6 +51,12 @@
     <Compile Include="FormCentral.Designer.cs">
       <DependentUpon>FormCentral.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLlamador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLlamador.Designer.cs">
+      <DependentUpon>FormLlamador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMostrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormCentral.resx">
       <DependentUpon>FormCentral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLlamador.resx">
+      <DependentUpon>FormLlamador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMostrar.resx">
       <DependentUpon>FormMostrar.cs</DependentUpon>

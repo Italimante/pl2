@@ -43,6 +43,7 @@
             this.buttonGenerarLlamada.TabIndex = 0;
             this.buttonGenerarLlamada.Text = "Generar llamada";
             this.buttonGenerarLlamada.UseVisualStyleBackColor = true;
+            this.buttonGenerarLlamada.Click += new System.EventHandler(this.buttonGenerarLlamada_Click);
             // 
             // buttonFacturacionTotal
             // 
@@ -52,7 +53,6 @@
             this.buttonFacturacionTotal.TabIndex = 1;
             this.buttonFacturacionTotal.Text = "Facturación total";
             this.buttonFacturacionTotal.UseVisualStyleBackColor = true;
-            this.buttonFacturacionTotal.Click += new System.EventHandler(this.buttonFacturacionTotal_Click);
             // 
             // buttonFacturacionLocal
             // 
