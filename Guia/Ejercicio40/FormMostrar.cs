@@ -33,6 +33,19 @@ namespace Ejercicio40
         {
             //this.richTextBoxMostrar.Text = centralita.ToString();
 
+            if(this.tipo is Llamada.TipoLlamada.Local)
+            {
+                this.richTextBoxMostrar.Text += "LLAMADAS LOCALES:";
+            }
+            else if(this.tipo is Llamada.TipoLlamada.Provincial)
+            {
+                this.richTextBoxMostrar.Text += "LLAMADAS PROVINCIALES:";
+            }
+            else
+            {
+                this.richTextBoxMostrar.Text += "TODAS LAS LLAMADAS:";
+            }
+
             //Comprobar de que tipo son las llamadas, y mostrar la lista:
             foreach(Llamada llamada in this.centralita.Llamadas)
             {
@@ -63,6 +76,18 @@ namespace Ejercicio40
                 }//End Switch
             }//End foreach
 
+            if (this.tipo is Llamada.TipoLlamada.Local)
+            {
+                this.richTextBoxMostrar.Text += "\n\nGANANCIAS POR LOCAL: " + this.centralita.GananciasPorLocal;
+            }
+            else if (this.tipo is Llamada.TipoLlamada.Provincial)
+            {
+                this.richTextBoxMostrar.Text += "\n\nGANANCIAS POR PROVINCIAL: " + this.centralita.GananciasPorProvincial;
+            }
+            else
+            {
+                this.richTextBoxMostrar.Text += "\n\nGANANCIAS TOTAL " + this.centralita.GananciasPorTotal;
+            }
 
         }//End MostrarLoad
 

@@ -168,12 +168,10 @@ namespace ComiqueriaLogic
         /// <returns></returns>
         public static Comiqueria operator +(Comiqueria comiqueria, Producto producto)
         {
-            if(comiqueria == producto)
+            if(comiqueria != producto)
             {
-                return comiqueria;
+                comiqueria.productos.Add(producto);
             }
-
-            comiqueria.productos.Add(producto);
 
             return comiqueria;
         }

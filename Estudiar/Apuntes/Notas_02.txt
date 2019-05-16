@@ -1,4 +1,6 @@
 Ejercicio 41 a 43
+EJERCICIO 44 A 47
+
 Durante la creacion de un nuevo objeto:
 Reserva memoria: NEW
 Inicializa memoria: el constructor

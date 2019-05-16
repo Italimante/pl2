@@ -77,18 +77,21 @@
             // 
             // buttonSalir
             // 
+            this.buttonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSalir.Location = new System.Drawing.Point(12, 128);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(175, 23);
             this.buttonSalir.TabIndex = 4;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.UseVisualStyleBackColor = true;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // FormCentral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.CancelButton = this.buttonSalir;
             this.ClientSize = new System.Drawing.Size(199, 160);
             this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.buttonFacturacionProvincial);

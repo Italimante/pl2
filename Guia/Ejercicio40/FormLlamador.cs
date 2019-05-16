@@ -14,6 +14,7 @@ namespace Ejercicio40
     {
         private Centralita centralita;
         private bool flag = false;
+        private bool flagNumeral = false;
         
 
         public FormLlamador(Centralita centralita)
@@ -141,6 +142,7 @@ namespace Ejercicio40
         private void buttonNumeral_Click(object sender, EventArgs e)
         {
             this.cargarNumeroDestino('#');
+            this.flagNumeral = true;
         }
 
 
@@ -163,7 +165,8 @@ namespace Ejercicio40
             this.comboBoxFranja.Enabled = false;
             this.flag = false;
             this.buttonNumeral.Enabled = true;
-            this.buttonLimpiar.Enabled = false;
+            this.flagNumeral = false;
+            this.buttonLimpiar.Enabled = false; 
         }
 
         private void buttonLlamar_Click(object sender, EventArgs e)
@@ -171,20 +174,18 @@ namespace Ejercicio40
             //Sí está activo guardo la franja en 'franja'
             Random r = new Random();
             float duracion = r.Next(1, 50);
-            float costo = (float)(float.MaxValue * 2.0 * (r.NextDouble() - 0.5));
+            float costo = r.Next(5, 56);
+            costo = costo / 10;
             string destino = this.textBoxNumeroDestino.Text;
             string origen = this.textBoxNumeroOrigen.Text;
-
-
-            //Duración, destino, origen //Depende del tipo de llamada
             
             //Es llamada provincial
-            if (this.textBoxNumeroOrigen.Text.Contains('#'))
+            if (this.flagNumeral)
             {
                 Provincial.Franja franja;
                 Enum.TryParse<Provincial.Franja>(comboBoxFranja.SelectedValue.ToString(), out franja);
 
-                Provincial llamadaP = new Provincial(origen, franja, duracion, destino);
+                Provincial llamadaP = new Provincial( origen, franja, duracion, destino);
                 this.centralita.Llamadas.Add(llamadaP);
 
                 DialogResult = DialogResult.OK;
@@ -200,8 +201,6 @@ namespace Ejercicio40
 
             }
 
-
-            //DialogResult = DialogResult.No;
             this.Close();
 
         }
