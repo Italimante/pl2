@@ -23,18 +23,46 @@ namespace Ejercicio40
 
         private void FormCentral_Load(object sender, EventArgs e)
         {
-
+            //this.buttonFacturacionLocal.Enabled = false;
+            //this.buttonFacturacionProvincial.Enabled = false;
+            //this.buttonFacturacionTotal.Enabled = false;
         }
 
         private void buttonGenerarLlamada_Click(object sender, EventArgs e)
         {
             //Si se presiona btnGenerarLlamada abrir un nuevo formulario como Dialog:
-            Form f = new FormLlamador(this.centralitaForm);
-            DialogResult result = f.ShowDialog();
-            if(result == DialogResult.OK)
-            {
 
+            FormLlamador fl = new FormLlamador(this.centralitaForm);
+
+            if(fl.ShowDialog() == DialogResult.OK)
+            {
+                this.centralitaForm = fl.DevolverCentralita;
+                this.buttonFacturacionLocal.Enabled = true;
+                this.buttonFacturacionProvincial.Enabled = true;
+                this.buttonFacturacionTotal.Enabled = true;
+                
             }
+        }
+
+        private void buttonFacturacionTotal_Click(object sender, EventArgs e)
+        {
+            FormMostrar fMostrar = new FormMostrar(centralitaForm);
+            fMostrar.MostrarFactura = Llamada.TipoLlamada.Todas;
+            fMostrar.Show();
+        }
+
+        private void buttonFacturacionLocal_Click(object sender, EventArgs e)
+        {
+            FormMostrar fMostrar = new FormMostrar(centralitaForm);
+            fMostrar.MostrarFactura = Llamada.TipoLlamada.Local;
+            fMostrar.Show();
+        }
+
+        private void buttonFacturacionProvincial_Click(object sender, EventArgs e)
+        {
+            FormMostrar fMostrar = new FormMostrar(centralitaForm);
+            fMostrar.MostrarFactura = Llamada.TipoLlamada.Provincial;
+            fMostrar.Show();
         }
     }
 

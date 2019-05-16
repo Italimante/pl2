@@ -53,6 +53,7 @@
             this.buttonFacturacionTotal.TabIndex = 1;
             this.buttonFacturacionTotal.Text = "Facturación total";
             this.buttonFacturacionTotal.UseVisualStyleBackColor = true;
+            this.buttonFacturacionTotal.Click += new System.EventHandler(this.buttonFacturacionTotal_Click);
             // 
             // buttonFacturacionLocal
             // 
@@ -62,6 +63,7 @@
             this.buttonFacturacionLocal.TabIndex = 2;
             this.buttonFacturacionLocal.Text = "Facturación local";
             this.buttonFacturacionLocal.UseVisualStyleBackColor = true;
+            this.buttonFacturacionLocal.Click += new System.EventHandler(this.buttonFacturacionLocal_Click);
             // 
             // buttonFacturacionProvincial
             // 
@@ -71,6 +73,7 @@
             this.buttonFacturacionProvincial.TabIndex = 3;
             this.buttonFacturacionProvincial.Text = "Facturación provincial";
             this.buttonFacturacionProvincial.UseVisualStyleBackColor = true;
+            this.buttonFacturacionProvincial.Click += new System.EventHandler(this.buttonFacturacionProvincial_Click);
             // 
             // buttonSalir
             // 

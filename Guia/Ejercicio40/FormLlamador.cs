@@ -14,6 +14,7 @@ namespace Ejercicio40
     {
         private Centralita centralita;
         private bool flag = false;
+        
 
         public FormLlamador(Centralita centralita)
         {
@@ -165,5 +166,44 @@ namespace Ejercicio40
             this.buttonLimpiar.Enabled = false;
         }
 
+        private void buttonLlamar_Click(object sender, EventArgs e)
+        {
+            //Sí está activo guardo la franja en 'franja'
+            Random r = new Random();
+            float duracion = r.Next(1, 50);
+            float costo = (float)(float.MaxValue * 2.0 * (r.NextDouble() - 0.5));
+            string destino = this.textBoxNumeroDestino.Text;
+            string origen = this.textBoxNumeroOrigen.Text;
+
+
+            //Duración, destino, origen //Depende del tipo de llamada
+            
+            //Es llamada provincial
+            if (this.textBoxNumeroOrigen.Text.Contains('#'))
+            {
+                Provincial.Franja franja;
+                Enum.TryParse<Provincial.Franja>(comboBoxFranja.SelectedValue.ToString(), out franja);
+
+                Provincial llamadaP = new Provincial(origen, franja, duracion, destino);
+                this.centralita.Llamadas.Add(llamadaP);
+
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                Local llamadaL = new Local(origen, duracion, destino, costo);
+                this.centralita.Llamadas.Add(llamadaL);
+
+                DialogResult = DialogResult.OK;
+                this.Close();
+
+            }
+
+
+            //DialogResult = DialogResult.No;
+            this.Close();
+
+        }
     }
 }

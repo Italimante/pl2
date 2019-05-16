@@ -211,6 +211,7 @@
             this.buttonLlamar.TabIndex = 0;
             this.buttonLlamar.Text = "Llamar";
             this.buttonLlamar.UseVisualStyleBackColor = true;
+            this.buttonLlamar.Click += new System.EventHandler(this.buttonLlamar_Click);
             // 
             // buttonLimpiar
             // 
@@ -220,7 +221,6 @@
             this.buttonLimpiar.TabIndex = 2;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
-
             // 
             // textBoxNumeroOrigen
             // 
@@ -233,6 +233,7 @@
             // 
             // buttonSalir
             // 
+            this.buttonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonSalir.Location = new System.Drawing.Point(182, 122);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(118, 23);
