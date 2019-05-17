@@ -1,7 +1,7 @@
 ﻿# Exámenes
 
 
-##Primer parcial
+## Primer parcial
 
 - **pp_ComiqueriaApp:** _Primera parcial de laboratorio, falta realizar la parte del formulario ventas, ordenar lista y otras errores que todavía no me di cuenta pero de haber_
 
@@ -9,7 +9,7 @@
 
 - **Devolución del profesor:**
     - [X] Sin Form
-    - [ ] Repite código en constructores de Producto, no los reutiliza
+    - [X] Repite código en constructores de Producto, no los reutiliza _(Creo que lo corregí también)_
     - [X] Logica de Vender(int cantidad) mal
     - [X] No ordena las ventas
     - [X] operator + repite código _(Creo que lo corregí)_

@@ -100,18 +100,7 @@ namespace ComiqueriaLogic
         /// <returns></returns>
         public static int OrdenarVentaPorFecha(Venta v1, Venta v2)
         {
-            if(v1.Fecha > v2.Fecha)
-            {
-                return 1;
-            }
-            else if(v1.Fecha < v2.Fecha)
-            {
-                return -1;
-            }
-            else
-            {
-                return 0;
-            }
+            return v2.Fecha.CompareTo(v1.Fecha);
         }
 
         /// <summary>
@@ -121,7 +110,7 @@ namespace ComiqueriaLogic
         /// <param name="cantidad">Cantidades del producto</param>
         public void Vender(Producto producto, int cantidad)
         {
-            Venta test = new Venta(producto, cantidad); //mmmmmmmmm
+            Venta test = new Venta(producto, cantidad);
             this.ventas.Add(test);
         }
 

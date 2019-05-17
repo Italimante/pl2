@@ -97,8 +97,8 @@ namespace ComiqueriaLogic
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("- Descripción: {0}\n", this.Descripcion);
             sb.AppendFormat("- Código: {0}\n", this.codigo);
-            sb.AppendFormat("- Precio: {0}\n", this.Precio);
-            sb.AppendFormat("- Stock: {0}", this.Stock);
+            sb.AppendFormat("- Precio: ${0}\n", this.Precio);
+            sb.AppendFormat("- Stock: {0} unidades", this.Stock);
             return sb.ToString();
         }
 

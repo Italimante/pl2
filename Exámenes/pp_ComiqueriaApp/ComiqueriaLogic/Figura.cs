@@ -12,23 +12,44 @@ namespace ComiqueriaLogic
         private double altura;
         #endregion
 
-        #region Constructores
+        #region Constructores NEW
 
-         /// <summary>
-         /// no recibe descripción. En su lugar inicializará ese campo con el siguiente texto "Figura *altura* cm"
-         /// donde* altura* corresponde al valor de la altura de la figura.
-         /// </summary>
-         /// <param name="stock"></param>
-         /// <param name="precio"></param>
-         /// <param name="altura"></param>
-        public Figura(int stock, double precio, double altura):base("Figura "+altura.ToString()+"cm",stock,precio)
+        /// <summary>
+        /// no recibe descripción. En su lugar inicializará ese campo con el siguiente texto "Figura *altura* cm"
+        /// donde* altura* corresponde al valor de la altura de la figura.
+        /// </summary>
+        /// <param name="stock"></param>
+        /// <param name="precio"></param>
+        /// <param name="altura"></param>
+        public Figura(int stock, double precio, double altura) : this("Figura " + altura.ToString() + "cm", stock, precio,altura)
+        {
+            
+            
+        }
+        public Figura(string descripcion, int stock, double precio, double altura) : base(descripcion, stock, precio)
         {
             this.altura = altura;
         }
-        public Figura(string descripcion, int stock, double precio, double altura):base(descripcion,stock,precio)
-        {
-            this.altura = altura;
-        }
+
+        #endregion
+
+        #region Constructores OLD
+
+        // /// <summary>
+        // /// no recibe descripción. En su lugar inicializará ese campo con el siguiente texto "Figura *altura* cm"
+        // /// donde* altura* corresponde al valor de la altura de la figura.
+        // /// </summary>
+        // /// <param name="stock"></param>
+        // /// <param name="precio"></param>
+        // /// <param name="altura"></param>
+        //public Figura(int stock, double precio, double altura):base("Figura "+altura.ToString()+"cm",stock,precio)
+        //{
+        //    this.altura = altura;
+        //}
+        //public Figura(string descripcion, int stock, double precio, double altura):base(descripcion,stock,precio)
+        //{
+        //    this.altura = altura;
+        //}
 
         #endregion
 
