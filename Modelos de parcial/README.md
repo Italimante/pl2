@@ -1,4 +1,9 @@
 # Modelos de parcial
-Modelos
+
+### Primer parcial (PP)
 
 - EquiposJugadores: _Falta validar los input del formulario_
+- Estacionamiento: _Falta validar y el formulario también_
+- CoiqueriaApp: _Lo uso de práctica para el recuperatorio, agregandole un formulario de alta_
+
+### Segundo parcial (SP)

@@ -36,7 +36,10 @@ namespace Ejercicio41
 
             if(fl.ShowDialog() == DialogResult.OK)
             {
+                
                 this.centralitaForm = fl.DevolverCentralita;
+
+
                 this.buttonFacturacionLocal.Enabled = true;
                 this.buttonFacturacionProvincial.Enabled = true;
                 this.buttonFacturacionTotal.Enabled = true;
