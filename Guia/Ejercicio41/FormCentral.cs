@@ -39,7 +39,6 @@ namespace Ejercicio41
                 
                 this.centralitaForm = fl.DevolverCentralita;
 
-
                 this.buttonFacturacionLocal.Enabled = true;
                 this.buttonFacturacionProvincial.Enabled = true;
                 this.buttonFacturacionTotal.Enabled = true;

@@ -53,10 +53,10 @@ namespace ComiqueriaApp
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void PrincipalForm_Load(object sender, EventArgs e)
-        {/*
+        {
             this.listBoxProductos.DataSource = new BindingSource(this.listaProductos, null);
             this.listBoxProductos.DisplayMember = "Value";
-            this.listBoxProductos.ValueMember = "Key";*/
+            this.listBoxProductos.ValueMember = "Key";
         }
 
         /// <summary>
@@ -100,8 +100,11 @@ namespace ComiqueriaApp
             DialogResult result = nuevoForm.ShowDialog();
             if(result == DialogResult.OK)
             {
+                //Recibo el producto y lo agrego a la comiquería
                 this.comiqueria += nuevoForm.DevolverProducto;
 
+                //Refresco la lista de productos
+                this.listaProductos = this.comiqueria.ListarProductos();
                 this.listBoxProductos.DataSource = new BindingSource(this.listaProductos, null);
                 this.listBoxProductos.DisplayMember = "Value";
                 this.listBoxProductos.ValueMember = "Key";

@@ -110,8 +110,8 @@ namespace ComiqueriaLogic
         /// <param name="cantidad">Cantidades del producto</param>
         public void Vender(Producto producto, int cantidad)
         {
-            Venta test = new Venta(producto, cantidad);
-            this.ventas.Add(test);
+            //Venta test = new Venta(producto, cantidad);
+            this.ventas.Add(new Venta(producto, cantidad));
         }
 
         public void Vender(Producto producto)

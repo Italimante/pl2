@@ -11,9 +11,13 @@ using ComiqueriaLogic;
 
 namespace ComiqueriaApp
 {
+    /// <summary>
+    /// No recibe nada, pero devuelve un Producto nuevo
+    /// </summary>
     public partial class NuevoForm : Form
     {
         private Producto productoNuevo;
+
 
         public NuevoForm()
         {
@@ -59,15 +63,35 @@ namespace ComiqueriaApp
         {
             if(this.comboBoxTipoProducto.SelectedItem == "Comic")
             {
-                Producto producto2 = new Figura("LALALALALALALALAL", 2, 650.00, 29.00);
-                this.productoNuevo = producto2;
+                Comic.TipoComic tipoComic;
+                Enum.TryParse<Comic.TipoComic>(this.comboBoxTipoDeComic.SelectedValue.ToString(), out tipoComic);
+
+                Producto p = new Comic(
+                    this.richTextBoxDescripcion.Text, 
+                    (int)this.numericUpDownStock.Value, 
+                    int.Parse(this.textBoxPrecio.Text), 
+                    this.textBoxAutor.Text,
+                    tipoComic
+                    );
+
+                this.productoNuevo = p;
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                //Llamo a constructor de figura
+                Producto p = new Figura(
+                    this.richTextBoxDescripcion.Text,
+                    (int)this.numericUpDownStock.Value,
+                    int.Parse(this.textBoxPrecio.Text),
+                    double.Parse(this.textBoxAltura.Text)
+                    );
+
+                this.productoNuevo = p;
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
     }

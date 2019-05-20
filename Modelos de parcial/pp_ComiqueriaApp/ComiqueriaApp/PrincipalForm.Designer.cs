@@ -31,12 +31,11 @@
             this.listBoxProductos = new System.Windows.Forms.ListBox();
             this.richTextBoxVentas = new System.Windows.Forms.RichTextBox();
             this.groupBoxAcciones = new System.Windows.Forms.GroupBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.richTextBoxDetalle = new System.Windows.Forms.RichTextBox();
             this.lblVentas = new System.Windows.Forms.Label();
             this.lblProductos = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.richTextBoxTest = new System.Windows.Forms.RichTextBox();
             this.groupBoxAcciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +69,16 @@
             this.groupBoxAcciones.TabIndex = 2;
             this.groupBoxAcciones.TabStop = false;
             this.groupBoxAcciones.Text = "Acciones";
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(101, 34);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.OnNuevoClick);
             // 
             // btnVender
             // 
@@ -109,30 +118,11 @@
             this.lblProductos.TabIndex = 5;
             this.lblProductos.Text = "Lista de Productos:";
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(101, 34);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 6;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.OnNuevoClick);
-            // 
-            // richTextBoxTest
-            // 
-            this.richTextBoxTest.Location = new System.Drawing.Point(337, 144);
-            this.richTextBoxTest.Name = "richTextBoxTest";
-            this.richTextBoxTest.Size = new System.Drawing.Size(183, 108);
-            this.richTextBoxTest.TabIndex = 6;
-            this.richTextBoxTest.Text = "";
-            // 
             // PrincipalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 430);
-            this.Controls.Add(this.richTextBoxTest);
             this.Controls.Add(this.lblProductos);
             this.Controls.Add(this.lblVentas);
             this.Controls.Add(this.richTextBoxDetalle);
@@ -161,6 +151,5 @@
         private System.Windows.Forms.Label lblVentas;
         private System.Windows.Forms.Label lblProductos;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.RichTextBox richTextBoxTest;
     }
 }
