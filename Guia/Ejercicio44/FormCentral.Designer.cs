@@ -1,4 +1,4 @@
-﻿namespace Ejercicio41
+﻿namespace Ejercicio44
 {
     partial class FormCentral
     {
