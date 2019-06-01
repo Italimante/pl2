@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.lblTextPalabras = new System.Windows.Forms.Label();
-            this.lblTextFinalizaLA = new System.Windows.Forms.Label();
+            this.lblTextFinalizaA = new System.Windows.Forms.Label();
             this.lblTextPalabrasTxtResultado = new System.Windows.Forms.Label();
-            this.lblCantFinalizaLA = new System.Windows.Forms.Label();
+            this.lblCantFinalizaA = new System.Windows.Forms.Label();
             this.lblCantPalabras = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.button20palabras = new System.Windows.Forms.Button();
@@ -50,14 +50,14 @@
             this.lblTextPalabras.TabIndex = 0;
             this.lblTextPalabras.Text = "Palabras";
             // 
-            // lblTextFinalizaLA
+            // lblTextFinalizaA
             // 
-            this.lblTextFinalizaLA.AutoSize = true;
-            this.lblTextFinalizaLA.Location = new System.Drawing.Point(12, 32);
-            this.lblTextFinalizaLA.Name = "lblTextFinalizaLA";
-            this.lblTextFinalizaLA.Size = new System.Drawing.Size(82, 13);
-            this.lblTextFinalizaLA.TabIndex = 1;
-            this.lblTextFinalizaLA.Text = "Subcadena \"A\"";
+            this.lblTextFinalizaA.AutoSize = true;
+            this.lblTextFinalizaA.Location = new System.Drawing.Point(12, 32);
+            this.lblTextFinalizaA.Name = "lblTextFinalizaA";
+            this.lblTextFinalizaA.Size = new System.Drawing.Size(82, 13);
+            this.lblTextFinalizaA.TabIndex = 1;
+            this.lblTextFinalizaA.Text = "Subcadena \"A\"";
             // 
             // lblTextPalabrasTxtResultado
             // 
@@ -68,14 +68,14 @@
             this.lblTextPalabrasTxtResultado.TabIndex = 2;
             this.lblTextPalabrasTxtResultado.Text = "Palabras";
             // 
-            // lblCantFinalizaLA
+            // lblCantFinalizaA
             // 
-            this.lblCantFinalizaLA.AutoSize = true;
-            this.lblCantFinalizaLA.Location = new System.Drawing.Point(109, 32);
-            this.lblCantFinalizaLA.Name = "lblCantFinalizaLA";
-            this.lblCantFinalizaLA.Size = new System.Drawing.Size(13, 13);
-            this.lblCantFinalizaLA.TabIndex = 3;
-            this.lblCantFinalizaLA.Text = "0";
+            this.lblCantFinalizaA.AutoSize = true;
+            this.lblCantFinalizaA.Location = new System.Drawing.Point(109, 32);
+            this.lblCantFinalizaA.Name = "lblCantFinalizaA";
+            this.lblCantFinalizaA.Size = new System.Drawing.Size(13, 13);
+            this.lblCantFinalizaA.TabIndex = 3;
+            this.lblCantFinalizaA.Text = "0";
             // 
             // lblCantPalabras
             // 
@@ -101,6 +101,7 @@
             this.button20palabras.TabIndex = 6;
             this.button20palabras.Text = "20 palabras";
             this.button20palabras.UseVisualStyleBackColor = true;
+            this.button20palabras.Click += new System.EventHandler(this.button20palabras_Click);
             // 
             // button100letras
             // 
@@ -110,6 +111,7 @@
             this.button100letras.TabIndex = 7;
             this.button100letras.Text = "100 letras";
             this.button100letras.UseVisualStyleBackColor = true;
+            this.button100letras.Click += new System.EventHandler(this.button100letras_Click);
             // 
             // button3primerasA
             // 
@@ -119,6 +121,7 @@
             this.button3primerasA.TabIndex = 8;
             this.button3primerasA.Text = "3 primeras \"A\"";
             this.button3primerasA.UseVisualStyleBackColor = true;
+            this.button3primerasA.Click += new System.EventHandler(this.button3primerasA_Click);
             // 
             // button3primerasO
             // 
@@ -128,6 +131,7 @@
             this.button3primerasO.TabIndex = 9;
             this.button3primerasO.Text = "3 primeras \"O\"";
             this.button3primerasO.UseVisualStyleBackColor = true;
+            this.button3primerasO.Click += new System.EventHandler(this.button3primerasO_Click);
             // 
             // rtxtTexto
             // 
@@ -151,9 +155,9 @@
             this.Controls.Add(this.button20palabras);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.lblCantPalabras);
-            this.Controls.Add(this.lblCantFinalizaLA);
+            this.Controls.Add(this.lblCantFinalizaA);
             this.Controls.Add(this.lblTextPalabrasTxtResultado);
-            this.Controls.Add(this.lblTextFinalizaLA);
+            this.Controls.Add(this.lblTextFinalizaA);
             this.Controls.Add(this.lblTextPalabras);
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -166,9 +170,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblTextPalabras;
-        private System.Windows.Forms.Label lblTextFinalizaLA;
+        private System.Windows.Forms.Label lblTextFinalizaA;
         private System.Windows.Forms.Label lblTextPalabrasTxtResultado;
-        private System.Windows.Forms.Label lblCantFinalizaLA;
+        private System.Windows.Forms.Label lblCantFinalizaA;
         private System.Windows.Forms.Label lblCantPalabras;
         private System.Windows.Forms.TextBox txtResultado;
         private System.Windows.Forms.Button button20palabras;
