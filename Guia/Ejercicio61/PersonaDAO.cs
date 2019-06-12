@@ -150,6 +150,30 @@ namespace Ejercicio61
             return p;
 
         }
+        /*
+        public static Persona ModificarPersonaPorID(int id)
+        {
+            Persona pNew = null;
 
+            try
+            {
+                pNew = PersonaDAO.LeerPorID(id);
+                if(pNew != null)
+                {
+
+
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+
+            return pNew;
+        }
+        */
     }
 }

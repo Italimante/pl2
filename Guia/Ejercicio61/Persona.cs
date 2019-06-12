@@ -33,7 +33,18 @@ namespace Ejercicio61
 
         public string Mostrar()
         {
+            StringBuilder sb = new StringBuilder();
 
+            sb.AppendFormat("\nNombre: {0}", this.nombre);
+            sb.AppendFormat("\nApellido: {0}", this.apellido);
+            sb.AppendFormat("\nID: {0}", this.id);
+
+            return sb.ToString();
+        }
+
+        public override string ToString()
+        {
+            return this.id + " " + this.nombre + " " + this.apellido;
         }
 
 
