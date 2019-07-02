@@ -23,6 +23,9 @@ _Carpeta con parciales que realicé de práctica, son los que están en el campu
 - **Exámenes:**
 _Contiene los exámenes que realicé en clase, primer parcial, segundo y/o finales_
 
+- **Tutoriales:**
+_Ejercicios que realicé de tutoriales random de internet, tienen el enlace del tutorial_
+
 ## Archivos .pdf
 
 - **Guía de Ejercicios - Laboratorio II - 2017.v6.0.0.pdf**:
