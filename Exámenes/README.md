@@ -31,3 +31,7 @@
     - [ ] • 10 - ModificarProductoForm – Falta formatear el precio actual para que se vea con 2 decimales. (0.25)
     - [ ] • ModificarProductoForm – OJO! Falta cambiar la propiedad ForeColor del lblError.
     - [ ] • ModificarProductoForm – OJO! Los botones del message box deben ser sí/no y no ok/cancel.
+
+## Segundo parcial
+- **sp_ComiqueriaApp:** _Segundo pparcial de laboratorio, como el orto, nada que agregar_
+- **sp_ComiqueriaApp(SRC).zip:** _Enunciado del parcial en limpio, script para la base de datos y solución inicial con el que arrancar_
