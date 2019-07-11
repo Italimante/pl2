@@ -10,7 +10,7 @@ namespace ComiqueriaLogic.Comun
     {
         public static string testFormato(this double d)
         {
-            return string.Format("$ {1}", Math.Round(d).ToString());
+            return String.Format("${0:0.00}", d);
         }
     }
 }
