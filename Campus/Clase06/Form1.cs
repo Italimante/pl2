@@ -89,8 +89,9 @@ namespace Clase06
         {
             string text = this.rtxtTexto.Text;
 
-            text.ind
+            //text.ind
 
+            return null;
         }
 
         #endregion
