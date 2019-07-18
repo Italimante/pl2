@@ -50,7 +50,9 @@ namespace Ejercicio61
         /// <param name="e"></param>
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-
+            Persona p = PersonaDAO.LeerPorID(1);
+            p.nombre = this.textBoxNombre.Text;
+            p.apellido = this.textBoxApellido.Text;
         }
 
         /// <summary>

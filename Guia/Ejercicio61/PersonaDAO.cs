@@ -110,7 +110,7 @@ namespace Ejercicio61
 
         public static Persona LeerPorID(int id)
         {
-            Persona p = new Persona("test", "test");
+            Persona p = null;
             //string consulta = String.Format("Select * from Persona WHERE ID = {0}", id);
             string consulta = String.Format("Select * from Persona");
 
@@ -150,30 +150,6 @@ namespace Ejercicio61
             return p;
 
         }
-        /*
-        public static Persona ModificarPersonaPorID(int id)
-        {
-            Persona pNew = null;
 
-            try
-            {
-                pNew = PersonaDAO.LeerPorID(id);
-                if(pNew != null)
-                {
-
-
-
-                }
-
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-
-
-            return pNew;
-        }
-        */
     }
 }

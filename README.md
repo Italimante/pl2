@@ -3,7 +3,7 @@ Repositorio que voy a utilizar en la cursada de PL2, para almacenar ejercicios d
 
 - **Curso:** 2C
 - **Turno:** Noche
-- **Profesor:** [Federico Dávila](https://github.com/FedeDavila1984)
+- **Profesor:** [Federico Dávila](https://github.com/FedeDavila1984) federicordavila@gmail.com
 - **Ayudantes:** [Mauricio Cerizza](https://github.com/mauricioCerizza), [Sebastian Pasquini](https://github.com/seba0413)
 
 ## Carpetas
