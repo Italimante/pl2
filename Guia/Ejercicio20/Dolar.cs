@@ -10,8 +10,8 @@ namespace Ejercicio20
     {
         #region ATRIBUTOS
 
-        private double _cantidad;
-        private float _cotizRespectoDolar;
+        private double cantidad;
+        private float cotizRespectoDolar;
 
         #endregion
 
@@ -50,23 +50,43 @@ namespace Ejercicio20
 
         #region SOBRECARGAS ENTRE MONEDAS
 
-        public static explicit operator Euro(Dolar d){}
-        public static explicit operator Pesos(Dolar d){}
-        public static implicit operator Dolar(double d){}
+        public static explicit operator Euro(Dolar d){
+            return null;
+        }
+        public static explicit operator Pesos(Dolar d){
+            return null;
+        }
+        public static implicit operator Dolar(double d){
+            return null;
+        }
 
         #endregion
 
         #region SOBRECARGAS IGUALDAD
-
-        public static bool operator !=(Dolar d, Euro e) { }
-        public static bool operator !=(Dolar d, Pesos p) { }
+        public static bool operator ==(Dolar d, Euro e) {
+            return null;
+        }
+        public static bool operator ==(Dolar d, Pesos p) { }
         public static bool operator !=(Dolar d1, Dolar d2) { }
+
+
+        public static bool operator !=(Dolar d, Euro e) {
+            return null;
+        }
+        public static bool operator !=(Dolar d, Pesos p) {
+            return null;
+        }
+        public static bool operator !=(Dolar d1, Dolar d2) {
+            return null;
+        }
 
         #endregion
 
         #region SOBRECARGAS RESTA
 
-        public static Dolar operator -(Dolar d, Euro e) { }
+        public static Dolar operator -(Dolar d, Euro e) {
+            return null;
+        }
 
         #endregion
 
