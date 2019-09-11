@@ -109,6 +109,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormEmpresa";
             this.Text = "FormEmpresa";
+            this.Load += new System.EventHandler(this.FormEmpresa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,7 +16,8 @@ namespace Clase08
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormEmpleado());
+            //Application.Run(new FormEmpleado());
+            Application.Run(new FormEmpresa());
         }
     }
 }

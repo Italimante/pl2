@@ -24,6 +24,13 @@ namespace Clase08
             this.MaximizeBox = false;
         }
 
+        public FormEmpresa(Empresa e):this() {
+            this.empresa = e;
+            this.textBoxRazonSocial.Text = e.RazonSocial;
+            this.textBoxDireccion.Text = e.Direccion;
+            this.maskedTextBoxGanancias.Text = e.Ganancia.ToString();
+        }
+
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             this.empresa = new Empresa(
@@ -32,10 +39,22 @@ namespace Clase08
                 float.Parse(this.maskedTextBoxGanancias.Text)
                 );
 
-            this.DialogResult = DialogResult.OK;
+            FormEmpleado frmEmpleado = new FormEmpleado(this.empresa);
+            frmEmpleado.Show();
+        }
 
-            this.Close();
-
+        private void FormEmpresa_Load(object sender, EventArgs e)
+        {
+            if (this.empresa != null) { 
+                this.textBoxRazonSocial.Text = this.empresa.RazonSocial;
+                this.textBoxDireccion.Text = this.empresa.Direccion;
+                this.maskedTextBoxGanancias.Text = this.empresa.Ganancia.ToString();
+            }
+            else{
+                this.textBoxRazonSocial.Text = "";
+                this.textBoxDireccion.Text = "";
+                this.maskedTextBoxGanancias.Text = "0";
+            }
         }
     }
 }

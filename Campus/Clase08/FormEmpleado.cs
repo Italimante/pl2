@@ -24,11 +24,7 @@ namespace Clase08
             this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.MaximizeBox = false;
-
             comboBoxPuesto.DataSource = Enum.GetValues(typeof(EPuestoJerarquico));
-
-            this.CargarEmpresa();
-
         }
 
         public FormEmpleado(Empresa empresa):this()
@@ -88,13 +84,18 @@ namespace Clase08
         /// </summary>
         public void CargarEmpresa()
         {
+
             formularioEmpresa = new FormEmpresa();
+
             DialogResult resultado = formularioEmpresa.ShowDialog();
+
             if (resultado == DialogResult.OK)
             {
                 this.empresa = formularioEmpresa.empresa;
                 this.richTextBoxConsola.Text = empresa.MostrarEmpresa();
             }
+
+
         }
     }
 }
