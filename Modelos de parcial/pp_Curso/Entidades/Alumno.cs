@@ -24,16 +24,18 @@ namespace Entidades
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.ExponerDatos());
-            sb.AppendFormat("\nCurso: {0}", this.AnioDivision);
+            sb.AppendFormat("Curso: {0}", this.AnioDivision);
             return sb.ToString();
         }
 
+        /// <summary>
+        /// dará como válido sólo documentos que tengan el siguiente formato XX-XXXX-X siendo las X números.
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <returns></returns>
         public override bool ValidarDocumentacion(string doc)
         {
-
-            return Regex.IsMatch(doc, pattern) //En consola ta el ejemplo
-
-            throw new NotImplementedException();
+            return Regex.IsMatch(doc, @"^([0-9][0-9]-)?\d{2,8}$");
         }
     }
 }

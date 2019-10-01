@@ -10,7 +10,11 @@ namespace Entidades
     {
         private DateTime fechaIngreso;
 
-        public int Antiguedad{ get { return this.fechaIngreso.Day; } }
+        public int Antiguedad{
+            get {
+                return (int)(DateTime.Now-this.fechaIngreso.Date).TotalDays;
+            }
+        }
 
         public Profesor(string n, string a, string d):base(n,a,d){}
 
@@ -21,12 +25,17 @@ namespace Entidades
         public override string ExponerDatos(){
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(base.ExponerDatos());
-            sb.AppendFormat("\nAntigüedad: {0}", this.Antiguedad);
+            sb.AppendFormat("Antigüedad: {0}", this.Antiguedad);
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Dará como válido cuando el documento tenga exactamente 8 caracteres.
+        /// </summary>
+        /// <param name="doc"></param>
+        /// <returns></returns>
         public override bool ValidarDocumentacion(string doc){
-            throw new NotImplementedException();
+            return doc.Length == 8;
         }
     }
 }

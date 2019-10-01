@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using Entidades;
 
 namespace Consola
 {
@@ -12,21 +9,23 @@ namespace Consola
         static void Main(string[] args)
         {
 
-            string soloLetras = @"^[a-zA-Z]+$";
-
-            string pattern = @"^([0-9][0-9]-)?\d{2,8}$";
-
-            string doc = "21-1234562"; //XX-XXXXX
-
-            if (Regex.IsMatch(doc, pattern))
-            {
-                Console.WriteLine("Si");
-            }
-            else {
-                Console.WriteLine("No");
-            }
-
-
+            // Genero un curso nuevo
+            Curso curso = new Curso(2, Divisiones.A, new Profesor("Fede", "Dávila", "12345678", new
+            DateTime(2015, 03, 20)));
+            // Genero alumnos...
+            Alumno a1 = new Alumno("Juan", "López", "22-3333-2", 2, Divisiones.A);
+            Alumno a2 = new Alumno("José", "Martínez", "23-3343-6", 2, Divisiones.B); //Está bien que no lo agregue son divisiones diferentes
+            Alumno a3 = new Alumno("María", "Gutiérrez", "22-3333-2", 2, Divisiones.A);
+            Alumno a4 = new Alumno("Marta", "Rodríguez", "23-3343-6", 2, Divisiones.A); //Tiene el mismo DNI que José Martinez de B
+            Alumno a5 = new Alumno("Marta", "Rodríguez", "233343126", 2, Divisiones.A); //No lo debería agregar
+            // ... Y los agrego al curso
+            curso += a1;
+            curso += a2;
+            curso += a3;
+            curso += a4;
+            curso += a5;
+            // Imprimo los datos del curso
+            Console.WriteLine((string)curso);
             Console.ReadKey();
 
         }

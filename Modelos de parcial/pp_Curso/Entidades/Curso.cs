@@ -39,7 +39,7 @@ namespace Entidades
                 {
                     if (c == a)
                     {
-                        sb.AppendFormat("\n {0}", a.ExponerDatos());
+                        sb.AppendFormat("{0}", a.ExponerDatos());
                     }
                 }
             }
