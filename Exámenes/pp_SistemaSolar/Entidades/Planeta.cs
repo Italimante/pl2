@@ -59,9 +59,11 @@ namespace Entidades
             sb.AppendFormat("\nTipo {0}", this.tipo);
 
             sb.AppendFormat("\nSatelites:");
-            foreach (Astro a in this.satelites) {
-                sb.AppendFormat("\n{0}", a.ToString());
+
+            for (int i = 0; i < this.Satelites.Count; i++) {
+                ((Planeta)this.Satelites[i]).Mostrar(); //TODO
             }
+            
 
             return sb.ToString();
         }
@@ -79,41 +81,23 @@ namespace Entidades
             return false;
         }
 
-        /// <summary>
-        /// Sobre carga del == (Planeta, Satélite) que chequea si el satélite 
-        /// se encuentra en la lista (comparando el nombre).
-        /// </summary>
-        /// <returns></returns>
+        /// Sobrecarga del == (Planeta, Satélite) que chequea si el satélite se encuentra en la lista (comparando el nombre).
         public static bool operator ==(Planeta p, Satelite s) {
-
             for(int i = 0; i < p.satelites.Count; i++)
             {
-                if ((Astro)p.satelites[i] == (Astro)s) { //Ni idea si esto es valido, no debería probar estas cosas en un examen pero bueno
+                if (p.satelites[i] == s) {
                     return true;
                 }
             }
-
             return false;
         }
+        public static bool operator !=(Planeta p, Satelite s){return !(p==s);}
 
-        public static bool operator !=(Planeta p, Satelite s)
-        {
-            return !(p==s);
-        }
-
-        /// <summary>
-        /// Sobre carga del == (Planeta, Planeta) compara dos planetas por el nombre.
-        /// </summary>
-        /// <param name="p"></param>
-        /// <param name="p2"></param>
-        /// <returns></returns>
+        /// Sobrecarga del == (Planeta, Planeta) compara dos planetas por el nombre.
         public static bool operator ==(Planeta p, Planeta p2) {
             return (p.nombre == p2.nombre);
         }
-        public static bool operator !=(Planeta p, Planeta p2)
-        {
-            return !(p == p2);
-        }
+        public static bool operator !=(Planeta p, Planeta p2){return !(p == p2);}
 
 
 

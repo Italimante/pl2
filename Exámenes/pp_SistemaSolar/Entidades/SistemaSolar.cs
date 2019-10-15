@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class SistemaSolar
+    public class SistemaSolar
     {
-        private List<Astro> planetas;
+        private static List<Astro> planetas;
 
-        public List<Astro> Planeta { get { return this.planetas; } }
+        public List<Astro> Planeta { get { return planetas; } }
 
         /// <summary>
         /// 22. MostrarInformacionAstros(): método que retorna toda la información de los planetas, y sus satélites.
@@ -19,16 +19,15 @@ namespace Entidades
         public String MostrarInformacionAstros() {
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("\nLista de planetas del Sistema solar:");
-            foreach (Planeta p in this.planetas)
+            foreach (Planeta p in planetas)
             {
                 sb.AppendFormat("\n{0}", p.ToString());
             }
-
             return sb.ToString();
         }
 
-        private SistemaSolar() {
-            this.planetas = new List<Astro>();
+        static SistemaSolar() {
+            planetas = new List<Astro>();
         }
 
     }

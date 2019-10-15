@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormSistemaSolar", "FormSistemaSolar\FormSistemaSolar.csproj", "{FC00F512-3908-4CD8-9A93-4DC63CD4E937}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{173F0E62-9FEC-4797-8FDF-81E5171125AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FC00F512-3908-4CD8-9A93-4DC63CD4E937}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC00F512-3908-4CD8-9A93-4DC63CD4E937}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC00F512-3908-4CD8-9A93-4DC63CD4E937}.Release|Any CPU.Build.0 = Release|Any CPU
+		{173F0E62-9FEC-4797-8FDF-81E5171125AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{173F0E62-9FEC-4797-8FDF-81E5171125AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{173F0E62-9FEC-4797-8FDF-81E5171125AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{173F0E62-9FEC-4797-8FDF-81E5171125AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

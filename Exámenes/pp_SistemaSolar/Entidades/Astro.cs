@@ -12,12 +12,22 @@ namespace Entidades
         private int duracionRotacion;
         protected string nombre;
 
+        /// <summary>
+        ///  Un constructor que recibe su nombre y la duración de órbita y la de rotación
+        /// </summary>
+        /// <param name="duraOrbita"></param>
+        /// <param name="duraRotacion"></param>
+        /// <param name="nombre"></param>
         public Astro(int duraOrbita, int duraRotacion, string nombre) {
             this.duracionOrbita = duraOrbita;
             this.duracionRotacion = duraRotacion;
             this.nombre = nombre;
         }
 
+        /// <summary>
+        ///  Método protegido que devuelve toda la información del astro.
+        /// </summary>
+        /// <returns></returns>
         protected string Mostrar() {
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("\nDuracion orbita: {0}", this.duracionOrbita);
@@ -26,13 +36,26 @@ namespace Entidades
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Orbitar() método abstracto
+        /// </summary>
+        /// <returns></returns>
         public abstract string Orbitar();
 
+        /// <summary>
+        /// Rotar() método virtual que retorna el mensaje  
+        /// </summary>
+        /// <returns>"Rotando. Tiempo estimado: {tiempo de rotación}."</returns>
         public virtual string Rotar() {
             return "Rotando. Tiempo Estimado: {0}" + this.duracionOrbita;
         }
 
-        //TODO: Agregar un conversor explícito de Astro a String que retorne sólo el nombre del astro.
+        /// <summary>
+        /// Conversor explícito de Astro a String que retorne sólo el nombre del astro.
+        /// </summary>
+        public static explicit operator string(Astro a) {
+            return a.nombre;
+        }
 
 
 
