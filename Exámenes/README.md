@@ -1,12 +1,12 @@
 ﻿# Exámenes
 
-## Primer parcial: SistemaSolar
+## Primer parcial: pp_SistemaSolar
 - **Fecha:** `08/10/2019`
 - **Nota:** `7`
 - **Devolución del profesor/Corrección a realizar:**
   - [ ] Rompe cuando quiere crear el planeta trata de parsear string a Tipo
   
-  ## Primer parcial: SistemaSolar
+## Segundo parcial: sp_SistemaSolar
 - **Fecha:** `19/11/2019`
 - **Nota:** `Aprobado`
 - **Devolución del profesor/Corrección a realizar:**
