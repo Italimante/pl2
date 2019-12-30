@@ -1,6 +1,6 @@
 ﻿# Programación & laboratorio II
 Repositorio utilizado para la cursada de Programación & Laboratorio II, donde almacenaba ejercicios de la guía, del campus, apuntes en clase, algunos exámenes y los trabajos prácticos.
-- **Profesor:** [Federico Dávila](https://github.com/FedeDavila1984) federicordavila@gmail.com
+- **Profesor:** [Federico Dávila](https://github.com/FedeDavila1984) | federicordavila@gmail.com
 
 ## Carpetas
 
