@@ -1,10 +1,6 @@
-﻿# Programación y laboratorio 2
-Repositorio que voy a utilizar en la cursada de PL2, para almacenar ejercicios de la guía, del campus, apuntes en clase, algunos exámenes y los trabajos prácticos.
-
-- **Curso:** 2C
-- **Turno:** Noche
+﻿# Programación & laboratorio II
+Repositorio utilizado para la cursada de Programación & Laboratorio II, donde almacenaba ejercicios de la guía, del campus, apuntes en clase, algunos exámenes y los trabajos prácticos.
 - **Profesor:** [Federico Dávila](https://github.com/FedeDavila1984) federicordavila@gmail.com
-- **Ayudantes:** [Mauricio Cerizza](https://github.com/mauricioCerizza), [Sebastian Pasquini](https://github.com/seba0413)
 
 ## Carpetas
 
@@ -25,6 +21,9 @@ _Contiene los exámenes que realicé en clase, primer parcial, segundo y/o final
 
 - **Tutoriales:**
 _Ejercicios que realicé de tutoriales random de internet, tienen el enlace del tutorial_
+
+- **Trabajos prácticos:**
+_Contiene los trabajos prácticos resueltos de la cursada_
 
 ## Archivos .pdf
 
